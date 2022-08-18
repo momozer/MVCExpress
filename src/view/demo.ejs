@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('./header')%>
+    <title>Demo</title>
+</head>
+<body>
+    <%- include('./navbar.ejs') %>
+    <h1 class="center">vue de la page demo</h1>
+
+<% for (prenom of data) { %>
+    <p> <%= prenom %> </p>
+    <img src="/public/img/developper.jpg" alt="developper">
+    <button type="button" class="btn btn-primary">It's ok !</button>
+
+<% }%>
+
+
+
+
+</body>
+</html>

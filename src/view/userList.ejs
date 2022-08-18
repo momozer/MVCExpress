@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./header.ejs')%>
+    <title>User list</title>
+  </head>
+  <body>
+    <%- include('./navbar.ejs') %>
+    <h1 class="text-center">My User List</h1>
+<div class="d-flex align-item-center">
+    <% for (item of data) { %>
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= item.name %> Pseudo : <%= item.username %>
+        </h5>
+        <a href="/userList/detailUser/<%= item.id %>" class="btn btn-primary">Détails</a>
+      </div>
+      <a  class="btn btn-primary">Modifier</a>
+      <a class="btn btn-danger" href="/userList/delete/<%=item.id %> ">Supprimer</a>
+     <a href="/userList/addUserPage" class="btn btn-success">Ajouter</a>
+    </div>
+
+    <% }%> 
+</div>
+  </body>
+</html>

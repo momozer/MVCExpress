@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./header.ejs')%>
+    <title>User list</title>
+  </head>
+  <body>
+    <%- include('./navbar.ejs') %>
+    <h1 class="text-center">Modifier l'utilisateur:</h1>
+
+    <form method="post" action="/userList/modifUser/<%= id%>">
+      <div>
+        <input name="name" type="text" placeholder="Prénom NOM" />
+        <label for="name">Prénom et NOM</label>
+        <input name="username" type="text" placeholder="Pseudo" />
+        <label for="username">pseudo</label>
+      </div>
+      <div>
+        <h2>Adresse:</h2>
+        <input name="street" type="text" placeholder="rue" />
+        <label for="street">Rue</label>
+      </div>
+      <div>
+        <input name="suite" type="text" placeholder="Appartement" />
+        <label for="suite">Numéro d'appartement ou de maison</label>
+      </div>
+      <div>
+        <input name="city" type="text" placeholder="Ville" />
+        <label for="city">Ville</label>
+      </div>
+      <div>
+        <input name="email" type="text" placeholder="exemple@exemple.com">
+        <label for="email">Adresse email</label>
+      </div>
+      <input value="Modifier" type="submit" class="btn btn-success">
+    </form>
+  </body>
+</html>

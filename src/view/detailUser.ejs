@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./header.ejs')%>
+    <title>User list</title>
+  </head>
+  <body>
+    <%- include('./navbar.ejs') %>
+    <h1 class="text-center">Détails de l'utilisateur <%= data.id %></h1>
+<div class="d-flex align-data-center">
+    
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= data.name %> Pseudo : <%= data.username %>
+        </h5>
+        <p class="card-text">
+          Mail: <%= data.email %> J'habite à <%= data.address.suite %>
+          <%= data.address.street %> dans la ville de <%= data.address.city %>
+        </p>
+        <button type="submit" class="btn btn-primary">Modifier</button>
+        <a class="btn btn-danger01" href="/userList/delete/<%=item.id %> ">Supprimer</a>
+      </div>
+    </div>
+</div>
+  </body>
+</html>
